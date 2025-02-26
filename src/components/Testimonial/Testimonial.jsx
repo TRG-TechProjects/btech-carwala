@@ -5,21 +5,21 @@ const testimonialData = [
         name: "John Doe",
         image:"https://xsgames.co/randomusers/assets/avatars/male/8.jpg",
         rating:"⭐⭐⭐⭐⭐",
-        review: "Lorem ipsum dolor sit amet consectetur adipisicing elit voluptatum.",
+        review: "Affordable prices and a great selection of cars. The entire process was hassle-free.",
         aosDelay: "0",
     },
     {
         name: "Harry Potter",
         image:"https://xsgames.co/randomusers/assets/avatars/female/19.jpg",
         rating:"⭐⭐⭐",
-        review: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam.",
+        review: "Best car rental service I’ve used - transparent pricing and no hidden fees.",
         aosDelay: "300",
     },
     {
         name: "Ben Ten",
         image:"https://xsgames.co/randomusers/assets/avatars/female/45.jpg",
         rating:"⭐⭐⭐⭐",
-        review: "Lorem ipsum Ipsam, nostrum dolor sit, amet consectetur adipisicing elit.",
+        review: "Customer support was super helpful, and the car was ready on time. Highly recommend.",
         aosDelay: "600",
     },
 ]
@@ -37,7 +37,7 @@ const Testimonial = () => {
             </p>
             <p 
             data-aos='fade-up'
-            className='text-center sm:px-44'>Lorem ipsum dolor sit amet consectetur elit.{""}
+            className='text-center sm:px-44'>Have a look on your client's review.{""}
             </p>
         </div>
 
@@ -50,7 +50,7 @@ const Testimonial = () => {
                         data-aos="fade-up"
                         data-aos-delay={data.aosDelay}
                         key={data.name} 
-                        className='card text-center group space-y-3 sm:space-y-6 p-4 bg-gray-100 dark:bg-white/20 sm:py-12 duration-300 rounded-lg'>
+                        className='card text-center group space-y-3 sm:space-y-6 p-4 bg-dark text-white sm:py-12 duration-300 rounded-lg'>
                             <div className='grid place-items-center'>
                                 <img src={data.image} alt="" 
                                     className='h-20 w-20 rounded-full'
@@ -58,7 +58,7 @@ const Testimonial = () => {
                             </div>
                             <div className='text-2xl'>{data.rating}</div>
                             <p>{data.review}</p>
-                            <p className='font-semibold text-center'>{data.name}</p>
+                            <p className='font-semibold text-center text-primary'>{data.name}</p>
                         </div>
                     )
                 })

@@ -25,13 +25,13 @@ const About = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit debitis eos quas quos quasi amet praesentium illum, et nisi, magni minima atque est nulla!
+                At CarWala, we make car rentals easy, affordable, and hassle-free. Whether you're planning a road trip, need a ride for business, or just want to cruise in style, we've got the perfect vehicle for you. 
               </p>
               <p
                 data-aos="fade-up"
                 data-aos-duration="1500"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sunt dolorem doloribus.
+                With a wide range of well-maintained cars, flexible rental plans, and top-notch customer service, we ensure a smooth and enjoyable driving experience.
               </p>
               <button
                 data-aos="fade-up"

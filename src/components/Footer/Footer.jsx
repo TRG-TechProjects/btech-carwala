@@ -29,7 +29,7 @@ const Footer = () => {
                     {/* company details */}
                     <div className='py-8 px-4'>
                         <h1 className='text-xl sm:text-3xl font-bold sm:text-left text-justify mb-3 font-serif gap-3 flex items-center'>B.tech Carwala</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Effortless Car Rental.</p>
                         <br />
                         <div className='flex items-center gap-3'>
                             <FaLocationArrow />
@@ -53,13 +53,13 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    
+
                     {/* navlinks */}
                     <div className='grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10'>
                         {/* first col */}
                         <div>
                             <div className='py-8 px-4'>
-                                <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Important Links</h1>
+                                <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Links</h1>
                                 <ul className='flex flex-col gap-3'>
                                     {
                                         FooterLinks.map((data) => {
@@ -79,7 +79,7 @@ const Footer = () => {
                         {/* second col */}
                         <div>
                             <div className='py-8 px-4'>
-                                <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Important Links</h1>
+                                <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Links</h1>
                                 <ul className='flex flex-col gap-3'>
                                     {
                                         FooterLinks.map((data) => {
@@ -99,7 +99,7 @@ const Footer = () => {
                         {/* third col */}
                         <div>
                             <div className='py-8 px-4'>
-                                <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Important Links</h1>
+                                <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Links</h1>
                                 <ul className='flex flex-col gap-3'>
                                     {
                                         FooterLinks.map((data) => {

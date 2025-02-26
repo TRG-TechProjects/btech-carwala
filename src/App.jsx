@@ -41,16 +41,30 @@ const App = () => {
   }, []);
 
   return (
+    // <div>
+    //   <Navbar theme={theme} setTheme={setTheme} />
+    //   <Hero theme={theme}/>
+    //   <About />
+    //   <Services />
+    //   <CarList />
+    //   <Testimonial />
+    //   <AppStoreBanner />
+    //   <Contact />
+    //   <Footer /> 
+    // </div>
+
     <div>
       <Navbar theme={theme} setTheme={setTheme} />
-      <Hero theme={theme}/>
-      <About />
-      <Services />
-      <CarList />
-      <Testimonial />
+
+      {/* Add id="" to allow scrolling */}
+      <div id='hero'><Hero theme={theme}/></div>
+      <div id="about"><About /></div>
+      <div id="services"><Services /></div>
+      <div id="cars"><CarList /></div>
+      <div id="reviews"><Testimonial /></div>
       <AppStoreBanner />
       <Contact />
-      <Footer /> 
+      <Footer />
     </div>
   );
 };

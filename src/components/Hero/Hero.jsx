@@ -25,10 +25,9 @@ const Hero = ({ theme }) => {
             <p
               data-aos="fade-up"
               data-aos-duration="1000"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque minima quas facilis!</p>
+            >Drive Your Dream - Hassle-Free Car Rentals at Your Fingertips.</p>
             <button
               data-aos="fade-up"
-              data-aos-duration="1500"
               className="button">Book now</button>
           </div>
         </div>

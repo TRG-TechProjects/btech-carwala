@@ -1,34 +1,34 @@
 import React from 'react'
-import { FaCameraRetro } from 'react-icons/fa'
-import { GiNotebook } from 'react-icons/gi'
-import { SlNote } from 'react-icons/sl'
+import { FaCarSide } from "react-icons/fa";
+import { IoMdPricetag } from "react-icons/io";
+import { RiCustomerServiceFill } from "react-icons/ri";
 
 const skillsData = [
     {
-        name: "Best Rate",
+        name: "Wide Selection of Cars",
         icon: (
-            <FaCameraRetro className='text-5xl text-primary group-hover:text-black duration-3000' />
+            <FaCarSide className='text-5xl text-primary dark:text-black group-hover:text-black duration-3000' />
         ),
         link: "#",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat.",
+        description: "From sporty supercars to luxury sedans & SUVs, we offer diverse vehicles for every need and budget. Choose your perfect ride with ease.",
         aosDelay: "0",
     },
     {
-        name: "Fast & Safe",
+        name: "Affordable Pricing",
         icon: (
-            <GiNotebook className='text-5xl text-primary group-hover:text-black duration-3000' />
+            <IoMdPricetag className='text-5xl text-primary dark:text-black group-hover:text-black duration-3000' />
         ),
         link: "#",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis.",
+        description: "Enjoy competitive rates with no hidden charges. We offer budget-friendly car rentals to make your journey both cost-effective and comfortable.",
         aosDelay: "500",
     },
     {
-        name: "Experienced Drivers",
+        name: "24/7 Customer Support",
         icon: (
-            <SlNote className='text-5xl text-primary group-hover:text-black duration-3000' />
+            <RiCustomerServiceFill className='text-5xl text-primary dark:text-black group-hover:text-black duration-3000' />
         ),
         link: "#",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam.",
+        description: "We're here for you anytime, anywhere! Our support team is available 24/7 to assist you with bookings, queries, and roadside assistance.",
         aosDelay: "1000",
     },
 ]
@@ -50,12 +50,12 @@ const Services = () => {
                                 key={skills.name}
                                 data-aos="fade-up"
                                 data-aos-delay={skills.aosDelay}
-                                className='card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark hover:bg-primary duration-300 ease-in-out text-white hover:text-black rounded-lg'
+                                className='card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark hover:bg-primary dark:bg-primary dark:text-black duration-300 ease-in-out text-white hover:text-black rounded-lg'
                             >
                                 <div className='grid place-items-center'>{skills.icon}</div>
-                                <h1>{skills.name}</h1>
+                                <h1 className='font-semibold'>{skills.name}</h1>
                                 <p>{skills.description}</p>
-                                <a href={skills.link} className='text-primary group-hover:text-black'>Know more</a>
+                                <a href={skills.link} className='font-semibold text-primary group-hover:text-black dark:text-black'>Know more</a>
                             </div>
                         ))
                     }

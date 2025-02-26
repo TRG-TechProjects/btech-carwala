@@ -37,7 +37,7 @@ const CarList = () => {
                     data-aos="fade-up"
                     className='text-3xl sm:text-4xl font-semibold font-serif mb-3'>Your Suitable Cars
                 </h1>
-                <p data-aos="fade-up" className='text-base pb-16'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, harum?
+                <p data-aos="fade-up" className='text-base pb-16'>Find the perfect car for every journey - comfort, style, and performance guaranteed.
                 </p>
 
                 {/* car listing cards */}
@@ -50,7 +50,7 @@ const CarList = () => {
                                     <div
                                     data-aos="fade-up"
                                     data-aos-delay={data.aosDelay}
-                                        className='space-y-3 border-2 border-gray-300 hover:border-primary p-3 rounded-xl relative group'
+                                        className='space-y-3 border-2 border-gray-400 hover:dark:border-primary hover:bg-primary dark:hover:text-black p-3 rounded-xl relative group'
                                     >
                                         <div className='w-full h-[100px]'>
                                             <img
@@ -58,7 +58,7 @@ const CarList = () => {
                                                 src={data.image} alt="" />
                                         </div>
                                         <div className='space-y-2'>
-                                            <h1 className='text-primary font-semibold'>{data.name}</h1>
+                                            <h1 className='dark:text-primary  font-semibold'>{data.name}</h1>
                                             <div className='flex justify-between items-centertext-xl font-semibold'>
                                                 <p>Price: ${data.price}/Day</p>
                                                 <a href="#">Details</a><br/>

@@ -15,11 +15,11 @@ const bannerImg = {
 
 const AppStoreBanner = () => {
   return (
-  <div className='pb-14 bg-gray-200 dark:bg-dark dark:text-white sm:grid sm:place-items-center'>
+  <div className='pt-16 pb-8 bg-gray-200 dark:bg-dark dark:text-white sm:grid sm:place-items-center'>
     <div className='container'>
       <div 
       data-aos="fade-up"
-      className="text-black mt-16 py-10 sm:min-h-[375px] sm:grid sm:place-items-center rounded-xl"
+      className="text-black p-8 sm:min-h-[375px] sm:grid sm:place-items-center rounded-xl"
       style={bannerImg}
       >
         <div>
@@ -29,7 +29,7 @@ const AppStoreBanner = () => {
                  className='text-2xl text-center sm:text-4xl font-semibold font-serif'>Get Started with Our App</h1>
                 <p
                  data-aos="fade-up"
-                 className='text-center sm:px-20'>Lorem ipsum dolor consectetur adipisicing elit. Repellendus, expedita m dicta nobis at vero eius.</p>
+                 className='text-center sm:px-20'>Download our app now and hit the road with ease, enjoying seamless bookings, exclusive deals, and a wide range of vehicles at your fingertips.</p>
                  <div 
                   data-aos="fade-up"
                  className='flex justify-center items-center ml-5'>
