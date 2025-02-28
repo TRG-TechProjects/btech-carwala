@@ -29,7 +29,7 @@ const Footer = () => {
                     {/* company details */}
                     <div className='py-8 px-4'>
                         <h1 className='text-xl sm:text-3xl font-bold sm:text-left text-justify mb-3 font-serif gap-3 flex items-center'>B.tech Carwala</h1>
-                        <p>Effortless Car Rental.</p>
+                        <p>Your Journey, Our Priority.</p>
                         <br />
                         <div className='flex items-center gap-3'>
                             <FaLocationArrow />

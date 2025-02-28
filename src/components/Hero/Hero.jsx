@@ -17,15 +17,15 @@ const Hero = ({ theme }) => {
             <p
               data-aos="fade-up"
               data-aos-duration="400"
-              className='text-primary text-2xl font-serif'>Effortless</p>
+              className='text-primary text-2xl font-serif'>Unforgettable journeys start here</p>
             <h1
               data-aos="fade-up"
               data-aos-duration="800"
-              className='text-5xl lg:text-7xl font-semibold font-serif'>Car Rental</h1>
+              className='text-5xl lg:text-7xl font-semibold font-serif'>Rent Your Dream Car</h1>
             <p
               data-aos="fade-up"
               data-aos-duration="1000"
-            >Drive Your Dream - Hassle-Free Car Rentals at Your Fingertips.</p>
+            >Now Hassle-Free Car Rentals at Your Fingertips.</p>
             <button
               data-aos="fade-up"
               className="button">Book now</button>
