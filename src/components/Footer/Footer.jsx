@@ -2,22 +2,58 @@ import React from 'react'
 import { FaFacebook, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa'
 import { AiFillInstagram } from "react-icons/ai";
 
-const FooterLinks = [
+const FooterLinks1 = [
     {
         title: "Home",
-        link: "/#",
+        link: "hero",
     },
     {
         title: "About",
-        link: "/#about",
+        link: "about",
+    },
+    {
+        title: "Services",
+        link: "/services",
     },
     {
         title: "Cars",
-        link: "/#cars",
+        link: "cars",
+    },
+]
+const FooterLinks2 = [
+    {
+        title: "Login",
+        link: "/#",
     },
     {
-        title: "Booking",
-        link: "/#booking",
+        title: "Signup",
+        link: "/#",
+    },
+    {
+        title: "All Cars",
+        link: "/#",
+    },
+    {
+        title: "Bookings",
+        link: "/#",
+    },
+]
+const FooterLinks3 = [
+    {
+        title: "Reviews",
+        link: "/#",
+    },
+    {
+        title: "Apps Store",
+        link: "/#",
+    },
+    {
+        title: "Play Store",
+        link: "/#",
+    },
+    {
+        title: "Contact",
+        link: "/#",
     },
 ]
 
@@ -63,7 +99,7 @@ const Footer = () => {
                                 <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Links</h1>
                                 <ul className='flex flex-col gap-3'>
                                     {
-                                        FooterLinks.map((data) => {
+                                        FooterLinks1.map((data) => {
                                             return (
                                                 <li key={data.title}
                                                     className='cursor-pointer hover:text-primary duration-300'
@@ -83,7 +119,7 @@ const Footer = () => {
                                 <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Links</h1>
                                 <ul className='flex flex-col gap-3'>
                                     {
-                                        FooterLinks.map((data) => {
+                                        FooterLinks2.map((data) => {
                                             return (
                                                 <li key={data.title}
                                                     className='cursor-pointer hover:text-primary duration-300'
@@ -103,7 +139,7 @@ const Footer = () => {
                                 <h1 className='text-xl  font-bold sm:text-left text-justify mb-3 font-serif'>Links</h1>
                                 <ul className='flex flex-col gap-3'>
                                     {
-                                        FooterLinks.map((data) => {
+                                        FooterLinks3.map((data) => {
                                             return (
                                                 <li key={data.title}
                                                     className='cursor-pointer hover:text-primary duration-300'
