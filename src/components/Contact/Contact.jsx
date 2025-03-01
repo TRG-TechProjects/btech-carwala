@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div className='bg-gray-200 dark:bg-dark dark:text-white pt-4 pb-16 sm:grid sm:place-items-center'>
+        <div className='bg-gray-200 dark:bg-dark dark:text-white pt-4 pb-16 grid place-items-center'>
             <div className="container">
                 <div 
                 data-aos="fade-up"

@@ -15,7 +15,7 @@ const bannerImg = {
 
 const AppStoreBanner = () => {
   return (
-  <div className='pt-16 pb-8 bg-gray-200 dark:bg-dark dark:text-white sm:grid sm:place-items-center'>
+  <div className='pt-16 pb-8 bg-gray-200 dark:bg-dark dark:text-white grid place-items-center'>
     <div className='container'>
       <div 
       data-aos="fade-up"

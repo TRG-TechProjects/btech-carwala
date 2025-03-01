@@ -21,8 +21,8 @@ const ResponsiveMenu = ({ showMenu }) => {
           </div>
 
           {/* User Account */}
-          <div className="my-6">
-            <ul className="flex justify-items-center">
+          <div className="my-6 grid justify-center">
+            <ul className="flex justify-between">
               <li
                 onClick={() => setAuthMode("login")}
                 className="button mx-1 py-1 w-20 cursor-pointer rounded-lg flex justify-center"
@@ -60,7 +60,7 @@ const ResponsiveMenu = ({ showMenu }) => {
 
         {/* FOOTER */}
         <div>
-          <h1 className='pb-4'>Made & Maintained by <a href="">TRG</a>{""}</h1>
+          <h1 className='pb-4 text-gray-400'>Made & Maintained by <a href="">TRG</a>{""}</h1>
         </div>
       </div>
     </div>

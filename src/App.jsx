@@ -55,13 +55,12 @@ const App = () => {
 
     <div>
       <Navbar theme={theme} setTheme={setTheme} />
-
       {/* Add id="" to allow scrolling */}
       <div id='hero'><Hero theme={theme}/></div>
       <div id="about"><About /></div>
       <div id="services"><Services /></div>
       <div id="cars"><CarList /></div>
-      <div id="reviews"><Testimonial /></div>
+      <Testimonial />
       <div id="contact"><AppStoreBanner /></div>
       <Contact />
       <Footer />
