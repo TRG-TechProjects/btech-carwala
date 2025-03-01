@@ -62,7 +62,7 @@ const App = () => {
       <div id="services"><Services /></div>
       <div id="cars"><CarList /></div>
       <div id="reviews"><Testimonial /></div>
-      <AppStoreBanner />
+      <div id="contact"><AppStoreBanner /></div>
       <Contact />
       <Footer />
     </div>

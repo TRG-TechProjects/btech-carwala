@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa'
+import { FaFacebook, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa'
+import { AiFillInstagram } from "react-icons/ai";
 
 const FooterLinks = [
     {
@@ -42,7 +43,7 @@ const Footer = () => {
                         {/* social Handles */}
                         <div className='flex items-center gap-3 mt-3'>
                             <a href="#">
-                                <FaInstagram className='text-3xl hover:text-primary duration-300' />
+                                <AiFillInstagram className='text-4xl hover:text-primary duration-300' />
                             </a>
                             <a href="#">
                                 <FaFacebook className='text-3xl hover:text-primary duration-300' />

@@ -1,9 +1,10 @@
 import { list } from 'postcss'
-import React, { useState,  useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { BiSolidSun, BiSolidMoon, BiSolidUserCircle } from "react-icons/bi";
 import ResponsiveMenu from './ResponsiveMenu.jsx';
 import { HiMenuAlt1, HiMenuAlt3 } from 'react-icons/hi';
 import { Link } from "react-scroll";
+import AuthModal from "../UserAuthentication/UserAuthentication.jsx";
 
 export const NavLinks = [
     {
@@ -31,23 +32,40 @@ export const NavLinks = [
         name: "REVIEWS",
         link: "reviews",
     },
+    {
+        id: "6",
+        name: "CONTACT",
+        link: "contact",
+    },
 ]
 const Navbar = ({ theme, setTheme }) => {
     const [showMenu, setShowMenu] = useState(false);
     const [authMode, setAuthMode] = useState(null); // "login" or "signup"
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const menuRef = useRef(null);
+    const menuButtonRef = useRef(null);  // ✅ Reference for menu toggle button
 
     const toggleMenu = () => {
-        setShowMenu(!showMenu);
+        setShowMenu(prev => !prev);
     }
 
     // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setDropdownOpen(false);
+            if (
+                (dropdownRef.current && dropdownRef.current.contains(event.target)) ||
+                (menuRef.current && menuRef.current.contains(event.target)) ||
+                (menuButtonRef.current && menuButtonRef.current.contains(event.target)) // ✅ Ignore clicks on menu button
+            ) {
+                return;
             }
+
+            // Close dropdown
+            setDropdownOpen(false);
+
+            // Close mobile menu
+            setShowMenu(false);
         };
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -122,7 +140,7 @@ const Navbar = ({ theme, setTheme }) => {
 
 
 
-                    <div className='flex items-center gap-4 md:hidden'>
+                    <div className='flex items-center gap-4 md:hidden' ref={menuRef}>
                         {/* dark mode icons */}
                         <div>
                             {
@@ -155,44 +173,12 @@ const Navbar = ({ theme, setTheme }) => {
 
                 </div>
             </div>
+            <div ref={menuRef}>            
             <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
+            </div>
 
             {/* Auth Modal */}
-            {authMode && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-white dark:bg-black p-6 rounded-lg shadow-lg w-96">
-                        <h2 className="text-xl font-semibold mb-4">{authMode === "login" ? "Login" : "Signup"}</h2>
-
-                        {authMode === "signup" && (
-                            <>
-                                <input type="text" placeholder="Full Name" className="w-full border p-2 mb-3 rounded dark:bg-black" />
-                                <input type="tel" placeholder="Phone Number" className="w-full border p-2 mb-3 rounded dark:bg-black" />
-                            </>
-                        )}
-
-                        <input type="email" placeholder="Email" className="w-full border p-2 mb-3 rounded dark:bg-black" />
-                        <input type="password" placeholder="Password" className="w-full border p-2 mb-3 rounded dark:bg-black" />
-
-                        <button className="bg-primary text-white dark:text-black px-4 py-2 w-full rounded">
-                            {authMode === "login" ? "Login" : "Sign Up"}
-                        </button>
-
-                        <p className="mt-3 text-center">
-                            {authMode === "login" ? "Don't have an account? " : "Already have an account? "}
-                            <span
-                                className="text-blue-500 cursor-pointer"
-                                onClick={() => setAuthMode(authMode === "login" ? "signup" : "login")}
-                            >
-                                {authMode === "login" ? "Sign up" : "Login"}
-                            </span>
-                        </p>
-
-                        <button onClick={() => setAuthMode(null)} className="mt-3 text-red-500 w-full">
-                            Close
-                        </button>
-                    </div>
-                </div>
-            )}
+            <AuthModal authMode={authMode} setAuthMode={setAuthMode} />
         </nav>
     );
 };
