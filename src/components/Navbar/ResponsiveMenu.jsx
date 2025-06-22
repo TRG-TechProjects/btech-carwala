@@ -4,7 +4,7 @@ import { NavLinks } from './Navbar';
 import { Link } from "react-scroll";
 import AuthModal from "../UserAuthentication/UserAuthentication.jsx";
 
-const ResponsiveMenu = ({ showMenu }) => {
+const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
 
   const [authMode, setAuthMode] = useState(null); // "login" or "signup"
 
@@ -46,6 +46,7 @@ const ResponsiveMenu = ({ showMenu }) => {
                     smooth={true} // Enable smooth scrolling
                     duration={800} // Scrolling duration in milliseconds
                     offset={-50} // Adjust the scrolling position if needed
+                    onClick={toggleMenu} // ✅ Close menu on link click
                   >
                     {data.name}
                   </Link>

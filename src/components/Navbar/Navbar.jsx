@@ -40,6 +40,7 @@ const Navbar = ({ theme, setTheme }) => {
     const dropdownRef = useRef(null);
     const menuRef = useRef(null);
     const menuButtonRef = useRef(null);  // ✅ Reference for menu toggle button
+    
 
     const toggleMenu = () => {
         setShowMenu(prev => !prev);
@@ -169,7 +170,8 @@ const Navbar = ({ theme, setTheme }) => {
                 </div>
             </div>
             <div ref={menuRef}>            
-            <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
+            {/* <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} /> */}
+            <ResponsiveMenu showMenu={showMenu} toggleMenu={() => setShowMenu(false)} />
             </div>
 
             {/* Auth Modal */}
@@ -179,3 +181,4 @@ const Navbar = ({ theme, setTheme }) => {
 };
 
 export default Navbar
+
